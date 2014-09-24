@@ -32,11 +32,11 @@ public class FileUtill {
 	 * @param s 対象文字列
 	 * @return
 	 */
-	private static String removeUTF8BOM(String s) {
-		if (s.startsWith(UTF8_BOM)) {
-			s = s.substring(1);
+	private static String removeUTF8BOM(String aStr) {
+		if (aStr.startsWith(UTF8_BOM)) {
+			aStr = aStr.substring(1);
 		}
-		return s;
+		return aStr;
 	}
 
 	/**
@@ -60,9 +60,7 @@ public class FileUtill {
 		}
 
 		try {
-
 			boolean firstLine = true;
-
 			br = new BufferedReader(new InputStreamReader(new FileInputStream(aFileName), "UTF-8"));
 			String str;
 			list = new ArrayList<String>();
@@ -134,7 +132,6 @@ public class FileUtill {
 		if (null == aFilePath || "".equals(aFilePath)) {
 			throw new KadaiException(ErrorCode.FILE_IO);
 		}
-
 		// ファイルパス＋ ファイル名 からファイルの絶対パスを作成
 		StringBuilder sb = new StringBuilder();
 		sb.append(aFilePath);

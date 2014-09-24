@@ -1,5 +1,6 @@
 package jp.ktsystem.kadai201408.Models;
 
+
 /**
  * 使用可能文字
  * @author TakahrioKikuchi
@@ -34,17 +35,16 @@ public enum EnabledWord {
 	Y(25),
 	Z(26);
 
-
 	/**
 	 * 対象の数値
 	 */
 	private int Value;
 
-	EnabledWord (int aNum){
+	EnabledWord(int aNum) {
 		this.Value = aNum;
 	}
 
-	public int getValue() {
+	public int getValue()  {
 		return Value;
 	}
 

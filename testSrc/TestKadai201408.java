@@ -12,6 +12,7 @@ import org.junit.runners.JUnit4;
  */
 
 /**
+ * testクラス
  * @author TakahrioKikuchi
  *
  */
@@ -23,25 +24,26 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G01T101() {
-		assertFailForLevel1(null,ErrorCode.FILE_IO);
+		assertFailForLevel1(null, ErrorCode.FILE_IO);
 
 	}
+
 	/**
 	 * 入力ファイルが存在しないl
 	 */
 	@Test
 	public void test_G01T102() {
-		assertFailForLevel1("",ErrorCode.FILE_IO);
+		assertFailForLevel1("", ErrorCode.FILE_IO);
 
 	}
 
 	/**
 	 * 読み込みデータの1行目に使用不可能文字が混ざっているl
-	 * C:\\workspace_study\\2014_8\\testフォルダ\\input\\
+	 * testフォルダ\\input\\
 	 */
 	@Test
 	public void test_G01T104() {
-		assertFailForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\1行目に不正文字あり.txt",ErrorCode.INVALID_STRING);
+		assertFailForLevel1("testフォルダ\\input\\1行目に不正文字あり.txt", ErrorCode.INVALID_STRING);
 
 	}
 
@@ -50,7 +52,7 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G01T105() {
-		assertFailForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\hoge.txt",ErrorCode.FILE_IO);
+		assertFailForLevel1("testフォルダ\\input\\hoge.txt", ErrorCode.FILE_IO);
 
 	}
 
@@ -59,9 +61,10 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G01T106() {
-		assertEqualsForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\半角のみ.txt",103);
+		assertEqualsForLevel1("testフォルダ\\input\\半角のみ.txt", 103);
 
 	}
+
 	/**
 	 * 入力データが半角英字のみ2行以上データ
 	 *
@@ -69,7 +72,7 @@ public class TestKadai201408 {
 	@Test
 	public void test_G01T107() {
 
-		assertEqualsForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\２行目データあり.txt",145);
+		assertEqualsForLevel1("testフォルダ\\input\\２行目データあり.txt", 145);
 	}
 
 	/**
@@ -78,7 +81,7 @@ public class TestKadai201408 {
 	@Test
 	public void test_G01T108() {
 
-		assertEqualsForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\全角半角混じり.txt",145);
+		assertEqualsForLevel1("testフォルダ\\input\\全角半角混じり.txt", 145);
 	}
 
 	/**
@@ -87,7 +90,7 @@ public class TestKadai201408 {
 	@Test
 	public void test_G01T109() {
 
-		assertEqualsForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\２行目データあり.txt",145);
+		assertEqualsForLevel1("testフォルダ\\input\\２行目データあり.txt", 145);
 
 	}
 
@@ -96,20 +99,19 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G01T110() {
-		assertEqualsForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\空データ.txt",0);
-
+		assertEqualsForLevel1("testフォルダ\\input\\空データ.txt", 0);
 
 	}
+
 	/**
 	 * 二行目以降に使用不可能データあり
 	 * 2行目に不正.txt
 	 */
 	@Test
 	public void test_G01T111() {
-		assertEqualsForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\2行目に不正.txt",145);
+		assertEqualsForLevel1("testフォルダ\\input\\2行目に不正.txt", 145);
 
 	}
-
 
 	//// レベル２
 
@@ -136,6 +138,7 @@ public class TestKadai201408 {
 	public void test_G02T103() {
 		assertFailForLevel2("", "", ErrorCode.FILE_IO);
 	}
+
 	/**
 	 * 出力ファイルパスが空文字
 	 */
@@ -144,17 +147,13 @@ public class TestKadai201408 {
 		assertFailForLevel2("", "", ErrorCode.FILE_IO);
 	}
 
-	//		assertFailForLevel1("C:\\workspace_study\\2014_8\\testフォルダ\\input\\1行目に不正文字あり.txt",ErrorCode.ININVALID_STRING);
-
-
 	/**
 	 * 1行目にエラー文字列
 	 */
 	@Test
 	public void test_G02T105() {
-		assertFailForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\1行目に不正文字あり.txt", "hoge", ErrorCode.INVALID_STRING);
+		assertFailForLevel2("testフォルダ\\input\\1行目に不正文字あり.txt", "hoge", ErrorCode.INVALID_STRING);
 	}
-
 
 	/**
 	 * 読み込みファイルに読み取り権限がない
@@ -177,35 +176,39 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G02T108() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\半角のみ.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\108.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\半角のみ.txt", "testフォルダ\\output\\108.txt");
 	}
+
 	/**
 	 * 入力ファイルデータが半角英字のみの2行以上データ
 	 */
 	@Test
 	public void test_G02T109() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\２行目データあり.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\109.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\２行目データあり.txt", "testフォルダ\\output\\109.txt");
 	}
+
 	/**
 	 * 入力ファイルが半角と全角英字のみの1行
 	 */
 	@Test
 	public void test_G02T110() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\全角半角混じり.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\110.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\全角半角混じり.txt", "testフォルダ\\output\\110.txt");
 	}
+
 	/**
 	 * 入力ファイルが半角と全角英字のみの2行以上データ
 	 */
 	@Test
 	public void test_G02T111() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\２行目データあり.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\111.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\２行目データあり.txt", "testフォルダ\\output\\111.txt");
 	}
+
 	/**
 	 * 入力ファイルデータの中身が空
 	 */
 	@Test
 	public void test_G02T112() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\空データ.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\112.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\空データ.txt", "testフォルダ\\output\\112.txt");
 	}
 
 	/**
@@ -213,7 +216,7 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G02T113() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\2行目に不正.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\113.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\2行目に不正.txt", "testフォルダ\\output\\113.txt");
 	}
 
 	/**
@@ -221,7 +224,7 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G02T114() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\全角のみ.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\114.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\全角のみ.txt", "testフォルダ\\output\\114.txt");
 	}
 
 	/**
@@ -229,16 +232,15 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G02T115() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\同じ値.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\115_複数.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\同じ値.txt", "testフォルダ\\output\\115_複数.txt");
 	}
-
 
 	/**
 	 * から文字混じり
 	 */
 	@Test
 	public void test_G02T116() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\から文字混じりデータ.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\116_から文字混じり.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\から文字混じりデータ.txt", "testフォルダ\\output\\116_から文字混じり.txt");
 	}
 
 	/**
@@ -246,9 +248,8 @@ public class TestKadai201408 {
 	 */
 	@Test
 	public void test_G02T117() {
-		assertEqualsForLevel2("C:\\workspace_study\\2014_8\\testフォルダ\\input\\から文字のみ.txt", "C:\\workspace_study\\2014_8\\testフォルダ\\output\\117_から文字ノミ.txt");
+		assertEqualsForLevel2("testフォルダ\\input\\から文字のみ.txt", "testフォルダ\\output\\117_から文字ノミ.txt");
 	}
-
 
 	/**
 	 * レベル1の正常系テスト
@@ -256,10 +257,10 @@ public class TestKadai201408 {
 	 * @param anInputFilePath
 	 * @param anOutputFilePath
 	 */
-	private void assertEqualsForLevel1(String anInputFilePath,long exceptNum) {
+	private void assertEqualsForLevel1(String anInputFilePath, long exceptNum) {
 
 		try {
-			if (exceptNum != Kadai.calcScoreSum(anInputFilePath)){
+			if (exceptNum != Kadai.calcScoreSum(anInputFilePath)) {
 				throw new KadaiException(null);
 			}
 		} catch (KadaiException e) {
@@ -283,7 +284,6 @@ public class TestKadai201408 {
 		}
 	}
 
-
 	/**
 	 * レベル2の正常系テスト
 	 *
@@ -298,7 +298,6 @@ public class TestKadai201408 {
 			throw new RuntimeException(e);
 		}
 	}
-
 
 	/**
 	 * レベル2の異常系のテスト
@@ -315,7 +314,4 @@ public class TestKadai201408 {
 			Assert.assertEquals(expected, e.getErrorCode());
 		}
 	}
-
-
-
 }

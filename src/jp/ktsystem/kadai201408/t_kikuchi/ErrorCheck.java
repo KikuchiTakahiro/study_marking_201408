@@ -25,12 +25,9 @@ public class ErrorCheck {
 	 */
 	public static boolean isEnableWord(String anStr)
 	{
-
 		// 引数が 半角英数時かチェック
 		Matcher enabledDayData = ENABLED_DAY_PATTERN.matcher(anStr);
 		//半角英数字の時のみtrue
 		return enabledDayData.matches();
 	}
-
-
 }
