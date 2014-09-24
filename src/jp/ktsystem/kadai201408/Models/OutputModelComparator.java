@@ -6,7 +6,7 @@ package jp.ktsystem.kadai201408.Models;
 import java.util.Comparator;
 
 /**
- * コンペレーター
+ * 点数とインデックスにて昇順ソート用クラス
  * @author TakahrioKikuchi
  *
  */
