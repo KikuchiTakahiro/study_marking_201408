@@ -1,7 +1,7 @@
-package jp.ktsystem.kadai201408.Models;
+package jp.ktsystem.kadai201408.models;
 
-import jp.ktsystem.kadai201408.Exception.ErrorCode;
-import jp.ktsystem.kadai201408.Exception.KadaiException;
+import jp.ktsystem.kadai201408.exception.ErrorCode;
+import jp.ktsystem.kadai201408.exception.KadaiException;
 
 /**
  * データ出力用モデルクラス

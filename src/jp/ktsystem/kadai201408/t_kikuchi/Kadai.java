@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import jp.ktsystem.kadai201408.Exception.ErrorCode;
-import jp.ktsystem.kadai201408.Exception.KadaiException;
-import jp.ktsystem.kadai201408.Models.OutputModel;
-import jp.ktsystem.kadai201408.Models.OutputModelComparator;
+import jp.ktsystem.kadai201408.exception.ErrorCode;
+import jp.ktsystem.kadai201408.exception.KadaiException;
+import jp.ktsystem.kadai201408.models.OutputModel;
+import jp.ktsystem.kadai201408.models.OutputModelComparator;
 
 /**2014年8月度課題クラス
  * @author TakahrioKikuchi

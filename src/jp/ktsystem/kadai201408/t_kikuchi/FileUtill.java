@@ -12,8 +12,8 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.ktsystem.kadai201408.Exception.ErrorCode;
-import jp.ktsystem.kadai201408.Exception.KadaiException;
+import jp.ktsystem.kadai201408.exception.ErrorCode;
+import jp.ktsystem.kadai201408.exception.KadaiException;
 
 /**
  * ファイルのUtillクラス

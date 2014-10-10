@@ -1,7 +1,7 @@
 /**
  *
  */
-package jp.ktsystem.kadai201408.Models;
+package jp.ktsystem.kadai201408.models;
 
 import java.util.Comparator;
 

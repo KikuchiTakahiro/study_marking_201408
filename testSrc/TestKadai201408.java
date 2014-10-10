@@ -1,5 +1,5 @@
-import jp.ktsystem.kadai201408.Exception.ErrorCode;
-import jp.ktsystem.kadai201408.Exception.KadaiException;
+import jp.ktsystem.kadai201408.exception.ErrorCode;
+import jp.ktsystem.kadai201408.exception.KadaiException;
 import jp.ktsystem.kadai201408.t_kikuchi.Kadai;
 import junit.framework.Assert;
 

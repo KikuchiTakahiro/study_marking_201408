@@ -1,7 +1,7 @@
 /**
  *
  */
-package jp.ktsystem.kadai201408.Exception;
+package jp.ktsystem.kadai201408.exception;
 
 /**
  * エラーコード

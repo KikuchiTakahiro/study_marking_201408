@@ -6,9 +6,9 @@ package jp.ktsystem.kadai201408.t_kikuchi;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.ktsystem.kadai201408.Exception.ErrorCode;
-import jp.ktsystem.kadai201408.Exception.KadaiException;
-import jp.ktsystem.kadai201408.Models.OutputModel;
+import jp.ktsystem.kadai201408.exception.ErrorCode;
+import jp.ktsystem.kadai201408.exception.KadaiException;
+import jp.ktsystem.kadai201408.models.OutputModel;
 
 /**
  * 課題Utilクラス
