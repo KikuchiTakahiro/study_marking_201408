@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -118,46 +117,4 @@ public class FileUtill {
 			}
 		}
 	}
-
-	/**
-	 * ファイル書き込み
-	 * @param aFilePath : 出力ファイルのディレクトリパス
-	 * @param anInputStr : 書き込ませる文字列
-	 * @param aFileName : ファイル名
-	 * @aFileName : ファイル名 (省略する場合は、NULLを指定)
-	 * @throws KadaiException
-	 */
-	public static void writeFile(String aFilePath, String anInputStr, String aFileName) throws KadaiException {
-		// ファイルパスチェック
-		if (null == aFilePath || "".equals(aFilePath)) {
-			throw new KadaiException(ErrorCode.FILE_IO);
-		}
-		// ファイルパス＋ ファイル名 からファイルの絶対パスを作成
-		StringBuilder sb = new StringBuilder();
-		sb.append(aFilePath);
-
-		if (null != aFileName) {
-			sb.append("\\").append(aFileName);
-		}
-
-		BufferedWriter bw = null;
-		try {
-			bw = new BufferedWriter(new FileWriter(new File(sb.toString()), true));
-
-			bw.write(anInputStr);
-			bw.newLine();
-
-			bw.close();
-		} catch (IOException e) {
-			throw new KadaiException(ErrorCode.FILE_IO);
-		} finally {
-			if (bw != null) {
-				try {
-					bw.close();
-				} catch (Exception ex) {
-				}
-			}
-		}
-	}
-
 }
