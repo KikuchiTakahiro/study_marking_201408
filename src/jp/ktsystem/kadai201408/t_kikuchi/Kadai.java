@@ -28,6 +28,7 @@ public class Kadai {
 		String[] aFileDataArray = KadaiUtill.createDataList(anInputPath);
 		// 返却用文字列
 		long sumValue = 0;
+		// ファイル文字列を1塊毎に処理
 		for (int i = 0; i < aFileDataArray.length; i++)
 		{
 			OutputModel aData = new OutputModel(aFileDataArray[i], i + 1);

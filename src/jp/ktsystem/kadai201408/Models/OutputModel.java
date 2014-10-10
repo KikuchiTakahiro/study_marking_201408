@@ -51,15 +51,21 @@ public class OutputModel {
 		// 対象文字列を大文字に変換
 		String temStr = targetStr.toUpperCase();
 
+		// 文字列を1文字毎に処理
 		for (char temChar : temStr.toCharArray())
 		{
 			try {
+				// 対象文字列の点数の合計を求める
+				// ＡＢ なら、 1+2 となる
+				// 文字の点数は、Enumの設定値から求められる
 				sumValue += EnabledWord.valueOf(String.valueOf(temChar)).getValue();
 			} catch (Exception ex)
 			{
 				throw new KadaiException(ErrorCode.OTHER);
 			}
 		}
+		// 点数の合計を求める  ＡＢ が3番目にある場合、
+		// (1+2) × 3 となる
 		sumValue = sumValue * targetIndex;
 	}
 
