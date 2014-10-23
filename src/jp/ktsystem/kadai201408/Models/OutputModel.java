@@ -54,7 +54,7 @@ public class OutputModel {
 		for (char temChar : temStr.toCharArray())
 		{
 			try {
-				sumValue += EnabledWord.valueOf(String.valueOf(temChar)).getValue();
+				sumValue += (temChar - 'A' + 1);
 			} catch (Exception ex)
 			{
 				throw new KadaiException(ErrorCode.OTHER);
